@@ -12,6 +12,9 @@ public class FirstApplication implements CommandLineRunner {
     @Autowired
     PersonRepository personRepository;
 
+    @Autowired
+    DogRepository dogRepository;
+
     public static void main(String[] args) {
         SpringApplication.run(FirstApplication.class,args);
     }
@@ -24,5 +27,12 @@ public class FirstApplication implements CommandLineRunner {
 
         Person personFromDb = personRepository.findFirstByName("John");
         System.out.println(personFromDb);
+
+        Dog dog = new Dog();
+        dog.setName("Maxx");
+        dogRepository.save(dog);
+
+        Dog dogFromDb = dogRepository.findFirstByName("Maxx");
+        System.out.println(dogFromDb);
     }
 }
