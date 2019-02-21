@@ -15,6 +15,9 @@ public class FirstApplication implements CommandLineRunner {
     @Autowired
     DogRepository dogRepository;
 
+    @Autowired
+    ManagerRepository managerRepository;
+
     public static void main(String[] args) {
         SpringApplication.run(FirstApplication.class,args);
     }
@@ -34,5 +37,19 @@ public class FirstApplication implements CommandLineRunner {
 
         Dog dogFromDb = dogRepository.findFirstByName("Maxx");
         System.out.println(dogFromDb);
+
+        Manager manager = new Manager();
+        manager.setFirstName("Jose") ;
+        manager.setLastName("Martinez") ;
+        manager.setDepartment("CIS"); ;
+        managerRepository.save(manager);
+
+        Manager managerFromDb1 = managerRepository.findFirstByFirstName("Jose");
+        //System.out.println(managerFromDb);
+        System.out.println(managerFromDb1);
+
+        Manager managerFromDb2 = managerRepository.findFirstByLastName("Martinez");
+        //System.out.println(managerFromDb);
+        System.out.println(managerFromDb2);
     }
 }

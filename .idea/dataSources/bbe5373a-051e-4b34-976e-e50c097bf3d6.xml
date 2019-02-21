@@ -14,112 +14,142 @@
       <Visible>1</Visible>
     </schema>
     <table id="5" parent="4" name="DOG"/>
-    <table id="6" parent="4" name="PERSON"/>
-    <table id="7" parent="4" name="flyway_schema_history"/>
-    <column id="8" parent="5" name="ID">
+    <table id="6" parent="4" name="MANAGER"/>
+    <table id="7" parent="4" name="PERSON"/>
+    <table id="8" parent="4" name="flyway_schema_history"/>
+    <column id="9" parent="5" name="ID">
       <Position>1</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_2B2138B9_7897_4BA4_AD8A_96CF408E748C)</DefaultExpression>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_10F6B232_6200_4A6D_A4F9_B34ED6734F77)</DefaultExpression>
     </column>
-    <column id="9" parent="5" name="NAME">
+    <column id="10" parent="5" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR(24)|12s</DataType>
     </column>
-    <column id="10" parent="5" name="BREED">
+    <column id="11" parent="5" name="BREED">
       <Position>3</Position>
       <DataType>VARCHAR(24)|12s</DataType>
     </column>
-    <index id="11" parent="5" name="PRIMARY_KEY_1">
+    <index id="12" parent="5" name="PRIMARY_KEY_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="12" parent="5" name="CONSTRAINT_1">
+    <key id="13" parent="5" name="CONSTRAINT_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="13" parent="6" name="ID">
+    <column id="14" parent="6" name="ID">
       <Position>1</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_C04F3561_BDB5_4A58_BB93_D1499D833755)</DefaultExpression>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_C49C7674_A5AC_43A4_969F_102A31DD576F)</DefaultExpression>
     </column>
-    <column id="14" parent="6" name="NAME">
+    <column id="15" parent="6" name="FIRST_NAME">
       <Position>2</Position>
       <DataType>VARCHAR(24)|12s</DataType>
     </column>
-    <index id="15" parent="6" name="PRIMARY_KEY_8">
+    <column id="16" parent="6" name="LAST_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(24)|12s</DataType>
+    </column>
+    <column id="17" parent="6" name="DEPARTMENT">
+      <Position>4</Position>
+      <DataType>VARCHAR(24)|12s</DataType>
+    </column>
+    <index id="18" parent="6" name="PRIMARY_KEY_5">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="16" parent="6" name="CONSTRAINT_8">
+    <key id="19" parent="6" name="CONSTRAINT_5">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="17" parent="7" name="installed_rank">
+    <column id="20" parent="7" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_BA22D2D7_8DA7_4E43_9B48_C686671F83C2)</DefaultExpression>
+    </column>
+    <column id="21" parent="7" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(24)|12s</DataType>
+    </column>
+    <index id="22" parent="7" name="PRIMARY_KEY_8">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="7" name="CONSTRAINT_8">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="8" name="installed_rank">
       <Position>1</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="18" parent="7" name="version">
+    <column id="25" parent="8" name="version">
       <Position>2</Position>
       <DataType>VARCHAR(50)|12s</DataType>
     </column>
-    <column id="19" parent="7" name="description">
+    <column id="26" parent="8" name="description">
       <Position>3</Position>
       <DataType>VARCHAR(200)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="7" name="type">
+    <column id="27" parent="8" name="type">
       <Position>4</Position>
       <DataType>VARCHAR(20)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="7" name="script">
+    <column id="28" parent="8" name="script">
       <Position>5</Position>
       <DataType>VARCHAR(1000)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="7" name="checksum">
+    <column id="29" parent="8" name="checksum">
       <Position>6</Position>
       <DataType>INTEGER(10)|4s</DataType>
     </column>
-    <column id="23" parent="7" name="installed_by">
+    <column id="30" parent="8" name="installed_by">
       <Position>7</Position>
       <DataType>VARCHAR(100)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="7" name="installed_on">
+    <column id="31" parent="8" name="installed_on">
       <Position>8</Position>
       <DataType>TIMESTAMP(23,10)|93s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP()</DefaultExpression>
     </column>
-    <column id="25" parent="7" name="execution_time">
+    <column id="32" parent="8" name="execution_time">
       <Position>9</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="26" parent="7" name="success">
+    <column id="33" parent="8" name="success">
       <Position>10</Position>
       <DataType>BOOLEAN|16s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="27" parent="7" name="PRIMARY_KEY_6">
+    <index id="34" parent="8" name="PRIMARY_KEY_6">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>installed_rank</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="28" parent="7" name="flyway_schema_history_s_idx">
+    <index id="35" parent="8" name="flyway_schema_history_s_idx">
       <ColNames>success</ColNames>
     </index>
-    <key id="29" parent="7" name="flyway_schema_history_pk">
+    <key id="36" parent="8" name="flyway_schema_history_pk">
       <ColNames>installed_rank</ColNames>
       <Primary>1</Primary>
     </key>
